@@ -1,5 +1,5 @@
 import os 
-from flask import Flask, render_template, request, redirect, url_for
+from flask import Flask, render_template, request, redirect, url_for, send_from_directory
 from PIL import Image
 import tensorflow as tf
 import numpy as np
@@ -42,6 +42,10 @@ def predict_shose_label(image_storage_object):
 @app.route('/', methods=['GET'])
 def index_page():
     return render_template('index.html')
+
+@app.route('/uploads/<path:filename>')
+def uploaded_file(filename):
+    return send_from_directory(UPLOAD_BASE_DIR, filename)
 
 @app.route('/upload',methods=['POST'])
 def handle_upload():
