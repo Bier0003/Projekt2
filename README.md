@@ -76,6 +76,20 @@ flowchart TD
     D --> H[templates/success.html]
 ```
 
+## Finished Look
+
+### Upload Page
+
+![Upload page](readme_pictures/upload.png)
+
+### Success Page
+
+![Success page](readme_pictures/success.png)
+
+### Classify Preview
+
+![Classify preview](readme_pictures/cassify_picture.png)
+
 ## Notes
 
 - The app currently uses a pretrained ImageNet model, so labels may not always match shoe categories exactly.
